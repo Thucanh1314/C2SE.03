@@ -1,0 +1,190 @@
+/* Reset */
+html, body, #root {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+/* Background */
+.page {
+  min-height: 100vh;
+  width: 100vw;
+  background:
+    linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+    url("https://i.pinimg.com/736x/2e/10/02/2e10028839fb25973fffcd2a0571d59d.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Card */
+.auth-card {
+  width: 90%;
+  max-width: 380px;
+  padding: 28px 24px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.086);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* Form */
+.auth-form {
+  width: 100%;
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Input */
+.auth-form input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+  outline: none;
+}
+
+.auth-form input:focus {
+  border-color: #fae591;
+  box-shadow: 0 0 0 2px rgba(251, 255, 129, 0.9);
+}
+
+/* Button submit */
+.auth-form button[type="submit"] {
+  margin-top: 6px;
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  background: #c583002f;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.auth-form button[type="submit"]:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(243, 151, 39, 0.4);
+}
+
+/* Switch */
+.switch {
+  margin-top: 14px;
+  font-size: 14px;
+}
+
+.switch button {
+  margin-left: 6px;
+  background: transparent;
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  padding: 6px 10px;
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+/* ===== FIX CAPTCHA + RELOAD + INPUT 1 HÀNG ===== */
+.captcha-row {
+  width: 100%;
+  display: flex !important;
+  align-items: center !important;
+  gap: 10px;
+}
+
+/* Ô hiển thị captcha – DÀI HƠN */
+.captcha-code {
+  flex: 1;
+  height: 44px;
+  background: #fff;
+  color: #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  letter-spacing: 4px;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+
+/* Nút reload – KHÓA cứng width */
+.refresh-captcha {
+  flex: 0 0 44px !important;
+  width: 44px !important;
+  height: 44px !important;
+  padding: 0 !important;
+  margin: 0 !important;
+
+  border-radius: 10px;
+  border: none;
+  background: #c58300;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+/* Ô nhập captcha – NGẮN HƠN */
+.captcha-input {
+  flex: 1;
+  height: 44px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  padding: 0 12px;
+  font-size: 14px;
+  box-sizing: border-box;
+  outline: none;
+}
+
+/* KHÓA không cho nút reload bị full width bởi CSS chung */
+.auth-form .captcha-row button {
+  width: 44px !important;
+  flex: 0 0 44px !important;
+}
+
+/* Chỉ submit mới full width */
+.auth-form button[type="submit"] {
+  width: 100% !important;
+}
+.error-text {
+  color: #ff6b6b;
+  font-size: 13px;
+  margin: 4px 0 0;
+  text-align: left;
+  width: 100%;
+}
+
+.forgot-password {
+  width: 100%;
+  text-align: right;
+  margin-top: -2px;
+  margin-bottom: 6px;
+}
+
+.forgot-password button {
+  background: transparent;
+  border: none;
+  color: #ffe08a;
+  font-size: 13px;
+  cursor: pointer;
+  padding: 0;
+}
+
+.forgot-password button:hover {
+  text-decoration: underline;
+}
